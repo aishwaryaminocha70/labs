@@ -2,12 +2,12 @@ def leap_year(year):
 	return int(year) % 4 == 0 and (int(year) % 100 != 0 or int(year) % 400 == 0)
 
 def rotate(s,n):
-sz=len(s)
+	sz=len(s)
 	if sz>1:
-n = n % sz
-return s[sz-n:] + s[:sz-n]
-else:
-return "String Unchanged"
+		n = n % sz
+		return s[sz-n:] + s[:sz-n]
+	else:
+		return "String Unchanged"
 def digit_count(s):
 	sval=str(int(s))
 	print sval
