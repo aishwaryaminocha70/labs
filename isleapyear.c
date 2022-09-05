@@ -1,24 +1,12 @@
-bool checkYear(int year)
-{
-	
-	if (year % 400 == 0)
-		return true;
+def is_leap(year):
+    leap = False
+    if year%4==0 and (year%100==0) and year%400==0:
+        leap=True
+    elif not(year%4==0) and not(year%100==0) and not(year%400==0):
+        leap=False
+    else:
+        leap=False
+        
+    return leap
 
-	
-	if (year % 100 == 0)
-		return false;
-
-	if (year % 4 == 0)
-		return true;
-	return false;
-}
-
-int main()
-{
-	int year = 2000;
-
-	checkYear(year) ? cout << "Leap Year":
-					cout << "Not a Leap Year";
-	return 0;
-}
-
+year = int(input())
