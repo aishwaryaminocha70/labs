@@ -1,26 +1,25 @@
-// One line C++ program to check if a
-// given year is leap year or not
-#include <bits/stdc++.h>
-using namespace std;
+def leap_year(year):
+	return int(year) % 4 == 0 and (int(year) % 100 != 0 or int(year) % 400 == 0)
 
-bool checkYear(int year)
-{
-	
-	// Return true if year is a multiple
-	// 0f 4 and not multiple of 100.
-	// OR year is multiple of 400.
-	return (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0));
-}
+def rotate(s,n):
+sz=len(s)
+	if sz>1:
+n = n % sz
+return s[sz-n:] + s[:sz-n]
+else:
+return "String Unchanged"
+def digit_count(s):
+	sval=str(int(s))
+	print sval
+	zero_count=0
+	even_count=0
+	odd_count=0
+	for d in sval:
+		if int(d)% 10 == 0:
+			zero_count += 1
+		elif int(d) % 2 == 0:
+			even_count += 1
+		elif int(d) % 2 != 0:
+			odd_count += 1
 
-// Driver code
-int main()
-{
-	int year = 2000;
-
-	checkYear(year)?
-	cout << "Leap Year":
-	cout << "Not a Leap Year";
-	return 0;
-}
-
-// This code is contributed by Akanksha Rai
+	return (even_count, odd_count, zero_count)
