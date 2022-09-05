@@ -1,21 +1,29 @@
-include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int main()
-{
-    int year;
+bool leapYear(int y);
 
-    year=2000;
-
-    if(year % 400 == 0)
-        cout << year << " is a Leap Year";
-        
-    else if(year % 4 == 0  && year % 100 != 0)
-        cout << year << " is a Leap Year";
-        
-    else
-        cout << year << " is not a Leap Year";
-    
-    return 0;
+int main(){
+   int y;
+   cout<<"Enter year: ";
+   cin>>y;
+   //Calling function
+   bool flag = leapYear(y);
+   if(flag == true)  
+      cout<<y<<" is a leap Year"; 
+   else 
+      cout<<y<<" is not a leap Year";
+   return 0;
 }
-
+bool leapYear(int y){
+   bool isLeapYear = false;
+   if (y % 4 == 0) {
+      if (y % 100 == 0) {
+         if (y % 400 == 0) {
+            isLeapYear = true;
+         }
+      } 
+      else isLeapYear = true;
+   }
+   return isLeapYear;
+}
