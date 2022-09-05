@@ -1,5 +1,3 @@
-using namespace std;
-
 bool checkYear(int year)
 {
 	
