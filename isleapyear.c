@@ -1,29 +1,26 @@
-include <iostream>
+// One line C++ program to check if a
+// given year is leap year or not
+#include <bits/stdc++.h>
 using namespace std;
 
-bool leapYear(int y);
+bool checkYear(int year)
+{
+	
+	// Return true if year is a multiple
+	// 0f 4 and not multiple of 100.
+	// OR year is multiple of 400.
+	return (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0));
+}
 
-int main(){
-   int y;
-   cout<<"Enter year: ";
-   cin>>y;
-   //Calling function
-   bool flag = leapYear(y);
-   if(flag == true)  
-      cout<<y<<" is a leap Year"; 
-   else 
-      cout<<y<<" is not a leap Year";
-   return 0;
+// Driver code
+int main()
+{
+	int year = 2000;
+
+	checkYear(year)?
+	cout << "Leap Year":
+	cout << "Not a Leap Year";
+	return 0;
 }
-bool leapYear(int y){
-   bool isLeapYear = false;
-   if (y % 4 == 0) {
-      if (y % 100 == 0) {
-         if (y % 400 == 0) {
-            isLeapYear = true;
-         }
-      } 
-      else isLeapYear = true;
-   }
-   return isLeapYear;
-}
+
+// This code is contributed by Akanksha Rai
