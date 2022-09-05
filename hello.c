@@ -1,8 +1,7 @@
-#include<iostream>
-using namespace std;
+int printf(const char *format, ...);
+  
 int main()
 {
-    cout<<"Hello World";
-    cout<<endl;
-    return 0;
+  printf( "Hello World" );
+  return 0;
 }
